@@ -1,0 +1,56 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("World_img.jpg"); /* Background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    height: 100vh; /* Makes sure it covers the entire height of the viewport */
+    display: flex;
+    justify-content: center; /* Horizontally centers the div */
+    align-items: center; /* Vertically centers the div */
+}
+
+/* Overlay for Better Text Visibility */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent dark overlay */
+    z-index: -1;
+}
+
+/* Clock Container */
+div {
+    background-color: rgba(10, 1, 1, 0.938); /* Semi-transparent white background */
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Clock Text */
+p {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    color: #c8cbce; /* Blue for clock text */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    div {
+        padding: 20px 30px;
+    }
+
+    p {
+        font-size: 2em;
+    }
+}
